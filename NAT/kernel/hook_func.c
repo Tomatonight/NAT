@@ -98,7 +98,7 @@ unsigned int hook_func_nat(void *priv, struct sk_buff *skb, const struct nf_hook
         else
             return NF_DROP;
     case NF_INET_LOCAL_OUT:
-      //  if (search_nat_out(skb))
+        if (search_nat_out(skb))
             return NF_ACCEPT;
      //   else
             return NF_DROP;
